@@ -1,5 +1,4 @@
+var auth = require('./controllers/auth.js');
 module.exports = function(app) {
-  app.get('/', function(req, res, next) {
-    res.send(['hello', 'phone', 'waterbottle']);
-  });
+  app.post('/signup', auth.signup);
 }
